@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,40 @@
       <h1>Lab 1: API Demo</h1>
       <button id="apiButton" type="button">Запитати API</button>
       <pre id="apiOutput" class="output">Натисніть кнопку, щоб зробити запит...</pre>
+
+      <section class="form-section">
+        <h2>Форма з валідацією</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+              required
+            />
+            <small class="error-message" data-field="email"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+380XXXXXXXXX"
+              required
+            />
+            <small class="error-message" data-field="phone"></small>
+          </div>
+
+          <button type="submit">Надіслати</button>
+          <p id="formStatus" class="form-status">
+            Заповніть форму та натисніть «Надіслати».
+          </p>
+        </form>
+      </section>
     </main>
     <script src="js/app.js"></script>
   </body>
